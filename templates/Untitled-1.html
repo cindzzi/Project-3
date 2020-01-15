@@ -17,14 +17,35 @@ form {
 <form action="{{ url_for('main') }}" method="POST">
     <fieldset>
         <legend>Input values:</legend>
-        Team 1:
-        <input name="Team1" type="text" required>
+        Home or Away:
+        <input name="Home_or_Away" type="number" required>
         <br>
-        <br> Team 2:
-        <input name="Team2" type="text" required>
+        <br> Field Goals Made:
+        <input name="Field_Goals_Made" type="number" required>
         <br>
+        <br> Three Point Shots Made:
+        <input name="Three_Point_Shots_Made" type="number" required>
+        <br> 
+        <br>Free Throws Made:
+        <input name="Free_Throws_Made" type="number" required>
         <br>
+        <br>Free Throws Attempted:
+        <input name="Free_Throws_Attempted" type="number" required>
         <br>
+        <br>Steals:
+        <input name="Steals" type="number" required>
+        <br>
+        <br>Opponent 3 Point Shots:
+        <input name="Opponent_3_Point_Shots" type="number" required>
+        <br>
+        <br> Opponent Rebounds:
+        <input name="Opponent_Rebounds" type="number" required>
+        <br>
+        <br>Opponent Steals:
+        <input name="Opponent_Steals" type="number" required>
+        <br>
+        <br>Opponent Turnovers:
+        <input name="Opponent_Turnovers" type="number" required>
         <input type="submit">
     </fieldset>
 </form>
@@ -35,11 +56,8 @@ form {
             <b>{{ variable }}</b> : {{ value }}
         {% endfor %}
         <br>
-        <br> Predicted number of bikes in use:
+        <br> Predicted Result:
            <p style="font-size:50px">{{ result }}</p>
     {% endif %}
 </div>
 </html>
-
-
-<form action="{{ url_for('main') }}" method="POST"></form>
