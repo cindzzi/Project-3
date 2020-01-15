@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Hello Visitors!</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="about-us">
+    <header class="site-header">
+        <div class="header-bar">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-10 col-lg-3">
+                        <h1 class="site-branding flex">
+                            <a href="elements.html">P I A D A</a>
+                        </h1>
+                    </div>
+
+                    <div class="col-2 col-lg-9">
+                        <nav class="site-navigation">
+                            <div class="hamburger-menu d-lg-none">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div><!-- .hamburger-menu -->
+
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Predict</a></li>
+                                <li><a href="https://public.tableau.com/profile/oluwatomisin.ayankoya#!/vizhome/IndianaPacers_15789700902450/Dashboard1">Vizualization</a></li>
+                                <li><a href="#">About us</a></li>
+                                <!-- <li><a href="#">About us</a></li> -->
+                                <li><a href="#"><i class="fas fa-search"></i></a></li>
+                            </ul><!-- flex -->
+                        </nav><!-- .site-navigation -->
+                    </div><!-- .col-12 -->
+                </div><!-- .row -->
+            </div><!-- container-fluid -->
+        </div><!-- header-bar -->
+    </header><!-- .site-header -->
+
+    <div class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="entry-header">
+                        <h2 class="entry-title">Predict</h2>
+
+                        <ul class="breadcrumbs flex align-items-center">
+                            <li><a href="#">Home</a></li>
+                            <li>Predict</li>
+                        </ul><!-- .breadcrumbs -->
+                    </div><!-- .entry-header -->
+                </div><!-- .col-12 -->
+            </div><!-- .row -->
+        </div><!-- .container -->
+    </div><!-- .page-header -->
+    <div class="hero text-center">
+        <h1>Bet</h1>
+    </div>
+    <div class="container">
+            <div class="row margin-top-50">
+              <div class="col-md-2">
+                <aside class="filters">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">Filter Search</div>
+                    <div class="panel-body">
+                      <form>
+                        <div class="form-group">
+                          <ul class="list-group" id="filters">
+                            <li class="filter list-group-item">
+                              <label for="date">Enter Team A</label>
+                              <input class="form-control" id="team" type="text" placeholder="Golden Warrior">
+                              <label for="date">Enter Team B</label>
+                              <input class="form-control" id="team" type="text" placeholder="Golden Warrior">
+                            </li>
+                          </ul>
+                        </div>
+                        <button id="myBtn" onclick=> Enter </button>
+                      </form>
+                    </div>
+                  </div>
+                </aside>
+              </div>
+              <div class="col-md-10">
+                <div id="table-area" class="">
+                  <table id="ufo-table" class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th class="table-head">Team A</th>
+                        <th class="table-head">Team B</th>
+                        <!-- <th class="table-head">Attempted percentage A</th>
+                        <th class="table-head">Attempted percentage B</th>
+                        <th class="table-head">Field goal made A</th>
+                        <th class="table-head">Field goal made B</th> -->
+                      </tr>
+                    </thead>
+                    <tbody></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <footer class="footer">
+            <span class="bottom">P I A D A</span>
+          </footer>
+        </div>
+        <script>var input = document.getElementById("myInput");
+            input.addEventListener("keyup", function(event) {
+              if (event.keyCode === 13) {
+               event.preventDefault();
+               document.getElementById("myBtn").click();
+              }
+            }); </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+        <script src="static/js/data.js"></script>
+        <script src="static/js/app.js"></script>
+
+    
+
+  
+    <script type='text/javascript' src='js/jquery.js'></script>
+    <script type='text/javascript' src='js/masonry.pkgd.min.js'></script>
+    <script type='text/javascript' src='js/jquery.collapsible.min.js'></script>
+    <script type='text/javascript' src='js/swiper.min.js'></script>
+    <script type='text/javascript' src='js/jquery.countdown.min.js'></script>
+    <script type='text/javascript' src='js/circle-progress.min.js'></script>
+    <script type='text/javascript' src='js/jquery.countTo.min.js'></script>
+    <script type='text/javascript' src='js/custom.js'></script>
+</body>
+</html>
