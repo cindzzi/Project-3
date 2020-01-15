@@ -17,35 +17,27 @@ form {
 <form action="{{ url_for('main') }}" method="POST">
     <fieldset>
         <legend>Input values:</legend>
-        Home or Away:
+        Team:
+        <input name="Team" type="number" required>
+        <br>
+        <br> Home:
         <input name="Home_or_Away" type="number" required>
         <br>
-        <br> Field Goals Made:
-        <input name="Field_Goals_Made" type="number" required>
-        <br>
-        <br> Three Point Shots Made:
-        <input name="Three_Point_Shots_Made" type="number" required>
+        <br> Opponent:
+        <input name="Opponent" type="number" required>
         <br> 
-        <br>Free Throws Made:
-        <input name="Free_Throws_Made" type="number" required>
+        <br>Field_Goals_Percentage:
+        <input name="Three_" type="number" required>
         <br>
-        <br>Free Throws Attempted:
-        <input name="Free_Throws_Attempted" type="number" required>
+        <br>Three_Points_Shots_Percentage:
+        <input name="Three_Points_Shots_Percentage" type="number" required>
         <br>
-        <br>Steals:
-        <input name="Steals" type="number" required>
+        <br>Opponent_Field_Goals_Percentage:
+        <input name="Opponent_Field_Goals_Percentage" type="number" required>
         <br>
-        <br>Opponent 3 Point Shots:
-        <input name="Opponent_3_Point_Shots" type="number" required>
+        <br>OpponenT_Three_Point_Shots_Percentage:
+        <input name="Opponent_3_Point_Shots_Percentage" type="number" required>
         <br>
-        <br> Opponent Rebounds:
-        <input name="Opponent_Rebounds" type="number" required>
-        <br>
-        <br>Opponent Steals:
-        <input name="Opponent_Steals" type="number" required>
-        <br>
-        <br>Opponent Turnovers:
-        <input name="Opponent_Turnovers" type="number" required>
         <input type="submit">
     </fieldset>
 </form>
