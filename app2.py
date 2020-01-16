@@ -6,25 +6,28 @@ with open(f'Notebooks/nbamodel2.pkl', 'rb') as f:
     classifier = pickle.load(f)
 
 app = flask.Flask(__name__, template_folder='templates')
+@app.route('/')
+def home():
+        return(flask.render_template('index.html'))
 
-@app.route('/', methods=['GET', 'POST'])
-def main():
+@app.route('/predict', methods=['GET', 'POST'])
+def predict():
     if flask.request.method == 'GET':
-        return(flask.render_template('Untitled-1.html'))
+        return(flask.render_template('about-us.html'))
 
     if flask.request.method == 'POST':
 
         Team = flask.request.form['Team']
-        Home_or_Away = flask.request.form['Home']
+        Home_or_Away = flask.request.form['Home_or_Away']
         Opponent = flask.request.form['Opponent']
         Field_Goals_Percentage = flask.request.form['FieldGoals.']
-        Three_Point_Shots_Percentage['X3PointShots.']
+        Three_Point_Shots_Percentage = flask.request.form['X3PointShots.']
         Opponent_Field_Goals_Percentage = flask.request.form['Opp.FieldGoals.']
         Opponent_Three_Point_Shots_Percentage = flask.request.form['Opp.3PointShots.']
 
         input_variables = pd.DataFrame([[Team, Home_or_Away,
                                          Opponent, Field_Goals_Percentage,
-                                         Three_Point_Shots_Percentage, Opponent_Field_Goals_Percentage, Opponent_Three_Points_Shots_Percentages]],
+                                         Three_Point_Shots_Percentage, Opponent_Field_Goals_Percentage, Opponent_Three_Point_Shots_Percentage]],
                                        columns=['Team', 'Home', 'Opponent', 'FieldGoals.',
                                                 'X3PointShots.', 'Opp.FieldGoals.', 'Opp.3PointShots.'],
     
@@ -35,13 +38,16 @@ def main():
         return flask.render_template('Untitled-1.html',
                                      original_input=
                                      {'Team': Team,
-                                      'Home_or_Away': Home,
+                                      'Home_or_Away': Home_or_Away,
                                       'Opponent': Opponent,
                                       'Field_Goals_Percentage': Field_Goals_Percentage,
                                       'Three_Point_Shots_Percentage': Three_Point_Shots_Percentage,
                                       'Opponent_Field_Goals_Percentage': Opponent_Field_Goals_Percentage,
-                                      'Opponent_Three_Point_Shots_Percentage': Opponent_3_Point_Shots},
+                                      'Opponent_Three_Point_Shots_Percentage': Opponent_Three_Point_Shots_Percentage},
                                      result=prediction)
+@app.route('/aboutus', methods=['GET', 'POST'])
+def aboutus():
+    return(flask.render_template('elements.html'))
 
 if __name__ == '__main__':
     app.run()

@@ -74,37 +74,44 @@
     <div class="hero text-center">
         <h1>Bet</h1>
     </div>
-    <div class="container">
-            <div class="row margin-top-50">
-              <div class="col-md-2">
-                <aside class="filters">
-                  <div class="panel panel-default">
-                    <div class="panel-heading">Filter Search</div>
-                    <div class="panel-body">
-                      <form>
-                        <div class="form-group">
-                          <ul class="list-group" id="filters">
-                            <li class="filter list-group-item">
-                              <label for="date">Enter Team A</label>
-                              <input class="form-control" id="team" type="text" placeholder="Golden Warrior">
-                              <label for="date">Enter Team B</label>
-                              <input class="form-control" id="team" type="text" placeholder="Golden Warrior">
-                            </li>
-                          </ul>
-                        </div>
-                        <button id="myBtn" onclick=> Enter </button>
+                              <legend>Input values:</legend>
+                              Team:
+                              <input name="Team" type="number" required>
+                              <br>
+                              <br> Home:
+                              <input name="Home_or_Away" type="number" required>
+                              <br>
+                              <br> Opponent:
+                              <input name="Opponent" type="number" required>
+                              <br> 
+                              <br>Field_Goals_Percentage:
+                              <input name="FieldGoals." type="number" required>
+                              <br>
+                              <br>Three_Points_Shots_Percentage:
+                              <input name="X3PointShots." type="number" required>
+                              <br>
+                              <br>Opponent_Field_Goals_Percentage:
+                              <input name="Opp.FieldGoals." type="number" required>
+                              <br>
+                              <br>Opponent_Three_Point_Shots_Percentage:
+                              <input name="Opp.3PointShots." type="number" required>
+                              <br>
+                              <!-- <button id="myBtn" onclick=> Submit </button> -->
+                              <input type="Submit">
+                          </fieldset>
                       </form>
-                    </div>
-                  </div>
-                </aside>
-              </div>
-              <div class="col-md-10">
-                <div id="table-area" class="">
-                  <table id="ufo-table" class="table table-striped">
-                    <thead>
-                      <tr>
-                        <th class="table-head">Team A</th>
-                        <th class="table-head">Team B</th>
+                      <br>
+                     
+<div class="result" align="center">
+    {% if result %}
+        {% for variable, value in original_input.items() %}
+            <b>{{ variable }}</b> : {{ value }}
+        {% endfor %}
+        <br>
+        <br> Predicted Result:
+           <p style="font-size:50px">{{ result }}</p>
+    {% endif %}
+</div>
                         <!-- <th class="table-head">Attempted percentage A</th>
                         <th class="table-head">Attempted percentage B</th>
                         <th class="table-head">Field goal made A</th>
@@ -121,20 +128,20 @@
             <span class="bottom">P I A D A</span>
           </footer>
         </div>
-        <script>var input = document.getElementById("myInput");
+        <!-- <script>var input = document.getElementById("myInput");
             input.addEventListener("keyup", function(event) {
               if (event.keyCode === 13) {
                event.preventDefault();
                document.getElementById("myBtn").click();
               }
-            }); </script>
+            }); </script> -->
+
+
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
         <script src="static/js/data.js"></script>
         <script src="static/js/app.js"></script>
 
-    
-
-  
     <script type='text/javascript' src='js/jquery.js'></script>
     <script type='text/javascript' src='js/masonry.pkgd.min.js'></script>
     <script type='text/javascript' src='js/jquery.collapsible.min.js'></script>
