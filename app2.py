@@ -6,11 +6,14 @@ with open(f'Notebooks/nbamodel2.pkl', 'rb') as f:
     classifier = pickle.load(f)
 
 app = flask.Flask(__name__, template_folder='templates')
+@app.route('/')
+def home():
+        return(flask.render_template('index.html'))
 
-@app.route('/', methods=['GET', 'POST'])
-def main():
+@app.route('/predict', methods=['GET', 'POST'])
+def predict():
     if flask.request.method == 'GET':
-        return(flask.render_template('Untitled-1.html'))
+        return(flask.render_template('about-us.html'))
 
     if flask.request.method == 'POST':
 
@@ -42,6 +45,9 @@ def main():
                                       'Opponent_Field_Goals_Percentage': Opponent_Field_Goals_Percentage,
                                       'Opponent_Three_Point_Shots_Percentage': Opponent_Three_Point_Shots_Percentage},
                                      result=prediction)
+@app.route('/aboutus', methods=['GET', 'POST'])
+def aboutus():
+    return(flask.render_template('elements.html'))
 
 if __name__ == '__main__':
     app.run()
