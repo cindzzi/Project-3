@@ -38,7 +38,7 @@ def predict():
         return flask.render_template('Untitled-1.html',
                                      original_input=
                                      {'Team': Team,
-                                      'Home_or_Away': Home_or_Away ,
+                                      'Home_or_Away': Home_or_Away,
                                       'Opponent': Opponent,
                                       'Field_Goals_Percentage': Field_Goals_Percentage,
                                       'Three_Point_Shots_Percentage': Three_Point_Shots_Percentage,
