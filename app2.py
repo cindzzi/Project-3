@@ -45,9 +45,10 @@ def predict():
                                       'Opponent_Field_Goals_Percentage': Opponent_Field_Goals_Percentage,
                                       'Opponent_Three_Point_Shots_Percentage': Opponent_Three_Point_Shots_Percentage},
                                      result=prediction)
-@app.route('/aboutus', methods=['GET', 'POST'])
+@app.route('/aboutus')
 def aboutus():
     return(flask.render_template('elements.html'))
+
 
 if __name__ == '__main__':
     app.run()
