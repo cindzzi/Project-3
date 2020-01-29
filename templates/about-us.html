@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 <style>
 form {
-    margin: auto;
+    margin: left;
     width: 35%;
 }
 .result {
@@ -10,6 +10,12 @@ form {
     width: 35%;
     border: 1px solid #ccc;
 }
+.reference {
+  position: absolute;
+  top: 600px;
+  right: 0px;
+}
+
 </style>
 <head>
     <!-- Required meta tags -->
@@ -84,6 +90,10 @@ form {
     </div><!-- .page-header -->
     <div class="hero text-center">
         <h1>NBA Prediction Model</h1>
+    </div>
+    <div class ="reference">
+        <h2>Reference</h2>
+        <img src="../static/images/ref.png">
     </div>
     <form action="{{ url_for('predict') }}" method="POST">
         <fieldset>
