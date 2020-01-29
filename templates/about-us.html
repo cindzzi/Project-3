@@ -83,50 +83,51 @@ form {
         </div><!-- .container -->
     </div><!-- .page-header -->
     <div class="hero text-center">
-        <h1>Bet</h1>
+        <h1>NBA Prediction Model</h1>
     </div>
-                              <legend>Input values:</legend>
-                              Team:
-                              <input name="Team" type="number" required>
-                              <br>
-                              <br> Home:
-                              <input name="Home_or_Away" type="number" required>
-                              <br>
-                              <br> Opponent:
-                              <input name="Opponent" type="number" required>
-                              <br> 
-                              <br>Field_Goals_Percentage:
-                              <input name="FieldGoals." type="number" required>
-                              <br>
-                              <br>Three_Points_Shots_Percentage:
-                              <input name="X3PointShots." type="number" required>
-                              <br>
-                              <br>Opponent_Field_Goals_Percentage:
-                              <input name="Opp.FieldGoals." type="number" required>
-                              <br>
-                              <br>Opponent_Three_Point_Shots_Percentage:
-                              <input name="Opp.3PointShots." type="number" required>
-                              <br>
-                              <!-- <button id="myBtn" onclick=> Submit </button> -->
-                              <input type="Submit">
-                          </fieldset>
-                      </form>
-                      <br>
+    <form action="{{ url_for('main') }}" method="POST">
+        <fieldset>
+            <legend>Input values:</legend>
+            Team:
+            <input name="Team" type="number" required>
+            <br>
+            <br> Home:
+            <input name="Home_or_Away" type="number" required>
+            <br>
+            <br> Opponent:
+            <input name="Opponent" type="number" required>
+            <br> 
+            <br>Field_Goals_Percentage:
+            <input name="FieldGoals." type="number" required>
+            <br>
+            <br>Three_Points_Shots_Percentage:
+            <input name="X3PointShots." type="number" required>
+            <br>
+            <br>Opponent_Field_Goals_Percentage:
+            <input name="Opp.FieldGoals." type="number" required>
+            <br>
+            <br>Opponent_Three_Point_Shots_Percentage:
+            <input name="Opp.3PointShots." type="number" required>
+            <br>
+            <input type="submit">
+        </fieldset>
+    </form>
+    <br>
+    <div class="result" align="center">
+        {% if result %}
+            {% for variable, value in original_input.items() %}
+                <b>{{ variable }}</b> : {{ value }}
+            {% endfor %}
+            <br>
+            <br> Predicted Result:
+                <p style="font-size:50px">{{ result }}</p>
+        {% endif %}
+    </div>
+                      
                      
-<div class="result" align="center">
-    {% if result %}
-        {% for variable, value in original_input.items() %}
-            <b>{{ variable }}</b> : {{ value }}
-        {% endfor %}
-        <br>
-        <br> Predicted Result:
-           <p style="font-size:50px">{{ result }}</p>
-    {% endif %}
-</div>>
-
-          <footer class="footer">
-            <span class="bottom">P I A D A</span>
-          </footer>
+    <footer class="footer">
+        <span class="bottom">P I A D A</span>
+    </footer>
      
 
 
