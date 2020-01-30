@@ -14,8 +14,8 @@ body {
 
 @font-face {
     font-family: "mountains";
-    src: url(fonts/beyond_the_mountains.ttf);
-    src: url(fonts/beyond_the_mountains.otf);
+    src: url(../fonts/beyond_the_mountains.ttf);
+    src: url(../fonts/beyond_the_mountains.otf);
     font-weight: 400;
 }
 
@@ -35,7 +35,7 @@ body {
 # site-header
 ------------------------------------------------------------*/
 .home-page {
-    background: url(images/middle-cover.jpg) no-repeat;
+    background: url(../static/images/middle-cover.jpg) no-repeat;
 }
 
 .site-header {
@@ -232,7 +232,7 @@ body {
 -----------------------------------------------------------*/
 .hero-content {
     padding: 220px 0;
-    background: url("images/about.jpg") no-repeat;
+    background: url("../images/about.jpg") no-repeat;
     background-size: cover;
     z-index: -1;
 }
@@ -357,7 +357,7 @@ body {
 # about-us
 ------------------------------------------------------------*/
 .about-us {
-    background: url("images/boneco3.gif") no-repeat;
+    background: url("../images/boneco3.gif") no-repeat;
     width: 100%;
     height: 100%;
 }
@@ -387,7 +387,7 @@ body {
 }
 
 .about-us .page-header {
-    background: url("images/boneco3.gif") no-repeat;
+    background: url("../images/boneco3.gif") no-repeat;
     background-size: cover;
 }
 
@@ -570,14 +570,14 @@ body {
 .blog-page {
     width: 100%;
     height: 100%;
-    background: url("images/about.jpg") no-repeat;
+    background: url("..images/about.jpg") no-repeat;
 }
 
 /*------------------------------------------------------------
 # site-header
 ------------------------------------------------------------*/
 .blog-page .page-header {
-    background: url("images/about.jpg") no-repeat;
+    background: url("../images/about.jpg") no-repeat;
 }
 
 .blog-list-page .single-blog-content {
@@ -672,14 +672,14 @@ body {
 # contact-page
 ------------------------------------------------------------*/
 .contact-page {
-    background: url("images/about.jpg") no-repeat;
+    background: url("../images/about.jpg") no-repeat;
 }
 
 /*------------------------------------------------------------
 # site-header
 ------------------------------------------------------------*/
 .contact-page .page-header {
-    background: url("images/about.jpg") no-repeat;
+    background: url("../images/about.jpg") no-repeat;
 }
 
 .contact-page .main-content {
@@ -809,11 +809,11 @@ body {
 # elements-page
 ------------------------------------------------------------*/
 .elements-page {
-    background: url("images/about.jpg") no-repeat;
+    background: url("../images/about.jpg") no-repeat;
 }
 
 .elements-page .page-header {
-    background: url("images/about.jpg") no-repeat;
+    background: url("../images/about.jpg") no-repeat;
 }
 
 .elements-page .elements-wrap {

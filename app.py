@@ -2,7 +2,7 @@ import flask
 import pickle
 import pandas as pd
 
-with open(f'Notebooks/nbamodel2.pkl', 'rb') as f:
+with open(f'Notebooks/nbamodel3.pkl', 'rb') as f:
     classifier = pickle.load(f)
 
 app = flask.Flask(__name__, template_folder='templates')
@@ -35,7 +35,7 @@ def predict():
 
         prediction = classifier.predict(input_variables)[0]
 
-        return flask.render_template('Untitled-1.html',
+        return flask.render_template('about-us.html',
                                      original_input=
                                      {'Team': Team,
                                       'Home_or_Away': Home_or_Away,
